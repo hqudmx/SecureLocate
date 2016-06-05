@@ -31,92 +31,34 @@ public class MyMap extends Activity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_map);
+        mMapView = (MapView) findViewById(R.id.map);
+        //在activity执行onCreate时执行mMapView.onCreate(savedInstanceState)，实现地图生命周期管理
+        mMapView.onCreate(savedInstanceState);
 
         mSpinner=(Spinner) findViewById(R.id.spinner1);
         mMapView=(MapView) findViewById(R.id.map);
         mMapView.onCreate(savedInstanceState);
         amap=mMapView.getMap();
-      /*  MarkerOptions markerOptions=new MarkerOptions();
-        markerOptions.position(new LatLng(116.398527,39.907901));
-
-        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.leadto));
-        Marker marker= amap.addMarker(markerOptions);
-        //marker.setPositionByPixels((int)118.084561, (int)24.603767);//设置中心点
-        LatLng Position=markerOptions.getPosition();
-        double x=Position.latitude;
-        double y=Position.longitude;
-        Toast.makeText(MyMap.this, "经纬度："+x+","+ y , Toast.LENGTH_LONG).show();//返回经度90.0？？？？？？*/
-        //添加直线
-      /*  PolylineOptions mPolylineOptions=new PolylineOptions();
-        mPolylineOptions.add(new LatLng(114.197671,22.223002),new LatLng(104.046303,30.614274));
-        mPolylineOptions.color(Color.RED);
-        mPolylineOptions.setDottedLine(true);//虚线
-        mPolylineOptions.width(10);
-        amap.addPolyline(mPolylineOptions);*/
-/*
-        //画范围
-        CircleOptions circleOptions=new CircleOptions();
-        circleOptions.center(new LatLng(116.570718,39.804313));
-        circleOptions.radius(500);
-        circleOptions.fillColor(Color.GREEN);
-        amap.addCircle(circleOptions);
-
-        double radius=circleOptions.getRadius();
-        LatLng Position=circleOptions.getCenter();
-        double x=Position.latitude;
-        double y=Position.longitude;
-        Toast.makeText(MyMap.this, ""+radius+","+x+","+y, Toast.LENGTH_LONG).show();//返回经度90.0？？？？？？？？？
-        setadapter();*/
     }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        mMapView.onResume();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        mMapView.onPause();
-    }
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        //在activity执行onDestroy时执行mMapView.onDestroy()，实现地图生命周期管理
         mMapView.onDestroy();
     }
-
-
-    public  void  setadapter(){
-        // 建立数据源
-        String[] mItems = getResources().getStringArray(R.array.spinnerMode);
-        // 建立Adapter并且绑定数据源
-        ArrayAdapter<String> _Adapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, mItems);
-        //绑定 Adapter到控件
-        mSpinner.setAdapter(_Adapter);
-        mSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-                switch (position){
-                    case 0:
-                        amap.setMapType(AMap.MAP_TYPE_NORMAL);
-                        break;
-                    case 1:
-                        amap.setMapType(AMap.MAP_TYPE_NIGHT);
-                        break;
-                    case 2:
-                        amap.setMapType(AMap.MAP_TYPE_SATELLITE);
-                        break;
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //在activity执行onResume时执行mMapView.onResume ()，实现地图生命周期管理
+        mMapView.onResume();
     }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        //在activity执行onPause时执行mMapView.onPause ()，实现地图生命周期管理
+        mMapView.onPause();
+    }
+
+
+
 }
