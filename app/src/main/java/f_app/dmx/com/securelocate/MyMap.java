@@ -1,15 +1,22 @@
 package f_app.dmx.com.securelocate;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.amap.api.maps.AMap;
 import com.amap.api.maps.MapView;
+import com.amap.api.maps.model.BitmapDescriptorFactory;
+import com.amap.api.maps.model.LatLng;
+import com.amap.api.maps.model.Marker;
+import com.amap.api.maps.model.MarkerOptions;
+import com.amap.api.maps.model.PolylineOptions;
 
 /**
  * Created by Administrator on 2016/6/5.
@@ -22,7 +29,6 @@ public class MyMap extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-
         setContentView(R.layout.activity_map);
         mSpinner=(Spinner) findViewById(R.id.spinner1);
         // 建立数据源
@@ -56,7 +62,21 @@ public class MyMap extends Activity {
         mMapView=(MapView) findViewById(R.id.map);
         mMapView.onCreate(savedInstanceState);
         amap=mMapView.getMap();
-        //amap.setMapType();
+
+        MarkerOptions markerOptions=new MarkerOptions();
+        markerOptions.position(new LatLng(116.398527,39.907901));
+        //Toast.makeText(MyMap.this, "(118.084561,24.603767)", Toast.LENGTH_LONG).show();
+        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.leadto));
+        Marker marker= amap.addMarker(markerOptions);
+
+        PolylineOptions mPolylineOptions=new PolylineOptions();
+        mPolylineOptions.add(new LatLng(114.197671,22.223002),new LatLng(104.046303,30.614274));
+        mPolylineOptions.color(Color.BLUE);
+        mPolylineOptions.setDottedLine(true);
+        mPolylineOptions.width(10);
+        amap.addPolyline(mPolylineOptions);
+
+
     }
 
     @Override
@@ -76,10 +96,11 @@ public class MyMap extends Activity {
         super.onDestroy();
         mMapView.onDestroy();
     }
-    /*@Override*/
-   /* protected void onSaveInstanceState(Bundle outState) {
+  /*  @Override
+    protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         //在activity执行onSaveInstanceState时执行mMapView.onSaveInstanceState (outState)，实现地图生命周期管理
         mMapView.onSaveInstanceState(outState);
     }*/
+
 }
