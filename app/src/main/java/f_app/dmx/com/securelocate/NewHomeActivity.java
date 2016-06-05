@@ -16,4 +16,5 @@ public class NewHomeActivity extends Activity{
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_newhome);
     }
+
 }
