@@ -36,27 +36,37 @@ public class MyMap extends Activity {
         mMapView=(MapView) findViewById(R.id.map);
         mMapView.onCreate(savedInstanceState);
         amap=mMapView.getMap();
-
-     /*   MarkerOptions markerOptions=new MarkerOptions();
+      /*  MarkerOptions markerOptions=new MarkerOptions();
         markerOptions.position(new LatLng(116.398527,39.907901));
-        //Toast.makeText(MyMap.this, "(118.084561,24.603767)", Toast.LENGTH_LONG).show();
+
         markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.leadto));
         Marker marker= amap.addMarker(markerOptions);
+        //marker.setPositionByPixels((int)118.084561, (int)24.603767);//设置中心点
+        LatLng Position=markerOptions.getPosition();
+        double x=Position.latitude;
+        double y=Position.longitude;
+        Toast.makeText(MyMap.this, "经纬度："+x+","+ y , Toast.LENGTH_LONG).show();//返回经度90.0？？？？？？*/
         //添加直线
-        PolylineOptions mPolylineOptions=new PolylineOptions();
+      /*  PolylineOptions mPolylineOptions=new PolylineOptions();
         mPolylineOptions.add(new LatLng(114.197671,22.223002),new LatLng(104.046303,30.614274));
         mPolylineOptions.color(Color.RED);
         mPolylineOptions.setDottedLine(true);//虚线
         mPolylineOptions.width(10);
         amap.addPolyline(mPolylineOptions);*/
-
-       /* //画范围
+/*
+        //画范围
         CircleOptions circleOptions=new CircleOptions();
         circleOptions.center(new LatLng(116.570718,39.804313));
         circleOptions.radius(500);
         circleOptions.fillColor(Color.GREEN);
-        amap.addCircle(circleOptions);*/
-        setadapter();
+        amap.addCircle(circleOptions);
+
+        double radius=circleOptions.getRadius();
+        LatLng Position=circleOptions.getCenter();
+        double x=Position.latitude;
+        double y=Position.longitude;
+        Toast.makeText(MyMap.this, ""+radius+","+x+","+y, Toast.LENGTH_LONG).show();//返回经度90.0？？？？？？？？？
+        setadapter();*/
     }
 
     @Override
