@@ -33,7 +33,7 @@ public class MyMap extends Activity {
         setContentView(R.layout.activity_map);
         mMapView = (MapView) findViewById(R.id.map);
         //在activity执行onCreate时执行mMapView.onCreate(savedInstanceState)，实现地图生命周期管理
-        mMapView.onCreate(savedInstanceState);
+//        mMapView.onCreate(savedInstanceState);
 
         mSpinner=(Spinner) findViewById(R.id.spinner1);
         mMapView=(MapView) findViewById(R.id.map);
