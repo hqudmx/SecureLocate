@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="spinnerMode">
-        <item>基本地图</item>
+        <item>正常地图</item>
         <item>夜间模式 </item>
         <item>卫星地图</item>
     </string-array>
