@@ -22,9 +22,8 @@ public class MyMap extends Activity {
         setContentView(R.layout.activity_map);
 
         mMapView=(MapView) findViewById(R.id.map);
-
         mMapView.onCreate(savedInstanceState);
-        amap=mMapView.getMap();
+        //amap=mMapView.getMap();
     }
 
     @Override
@@ -43,5 +42,11 @@ public class MyMap extends Activity {
     protected void onDestroy() {
         super.onDestroy();
         mMapView.onDestroy();
+    }
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        //在activity执行onSaveInstanceState时执行mMapView.onSaveInstanceState (outState)，实现地图生命周期管理
+        mMapView.onSaveInstanceState(outState);
     }
 }
