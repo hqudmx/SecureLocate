@@ -9,6 +9,7 @@ android {
             jniLibs.srcDirs = ['libs']
         }
     }
+
     defaultConfig {
         applicationId "f_app.dmx.com.securelocate"
         minSdkVersion 15
