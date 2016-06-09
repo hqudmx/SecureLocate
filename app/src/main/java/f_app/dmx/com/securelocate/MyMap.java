@@ -69,7 +69,11 @@ public class MyMap extends Activity implements PoiSearch.OnPoiSearchListener {
         mMapView.onCreate(savedInstanceState);
         amap = mMapView.getMap();
 
-
+      /*  MarkerOptions markerOptions=new MarkerOptions();
+       // markerOptions.position(new LatLng(39.907901,116.398527));
+        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.leadto));
+        Marker marker= amap.addMarker(markerOptions);
+        marker.setPositionByPixels((int)24.603767, (int)118.084561);//设置中心点*/
         mBt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -155,8 +159,12 @@ public class MyMap extends Activity implements PoiSearch.OnPoiSearchListener {
     public void onPoiSearched(PoiResult result, int rCode) {
         if (rCode == 1000) {
             if (result != null) {
+                Toast.makeText(MyMap.this, "查询成功" , Toast.LENGTH_SHORT).show();
                 ArrayList<PoiItem> items = result.getPois();
+
+
             } else {
+                Toast.makeText(MyMap.this, "查询为空" , Toast.LENGTH_SHORT).show();
                 List<String> keywords = result.getSearchSuggestionKeywords();
                 List<SuggestionCity> suggsetionCities = result.getSearchSuggestionCitys();
             }
