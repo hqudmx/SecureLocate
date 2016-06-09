@@ -1,63 +1,132 @@
-<android.support.v4.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/drawer"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/newhome"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg">
-    <FrameLayout
-        android:id="@+id/drawer_frame"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    android:layout_gravity="center"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    >
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/relative" >
-
-            <FrameLayout
-                android:id="@+id/container"
+            android:layout_height="55dp"
+            android:id="@+id/main_bottom"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            >
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_above="@+id/ll">
-            </FrameLayout>
+                android:layout_height="wrap_content"
+                android:id="@+id/img_tab_now"
+                android:scaleType="matrix"
+                android:layout_gravity="bottom"
+                android:layout_alignParentBottom="true"
+                />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/ll"
                 android:layout_alignParentBottom="true"
-                android:orientation="horizontal"
-               >
-
-
-                <Button
-                    android:id="@+id/btn2"
+                android:paddingBottom="2dp">
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:drawableTop="@drawable/location_home"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/image_map"
+                        android:scaleType="matrix"
+                        android:clickable="true"
+                        android:src="@drawable/safeRoute"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="安全路线"
+                        android:textSize="12sp"
+                        android:textColor="#fff"/>
+
+                </LinearLayout>
+                <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/image_location"
+                    android:scaleType="matrix"
+                    android:clickable="true"
+                    android:src="@drawable/location_home"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="安全定位"
-                    />
+                    android:textSize="12sp"
+                    android:textColor="#fff"/>
 
-                <Button
-                    android:id="@+id/btn3"
+            </LinearLayout>
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:drawableTop="@drawable/humiture_home"
-                    android:text="温湿度监控"
-                    />
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/img_humiture"
+                        android:scaleType="matrix"
+                        android:clickable="true"
+                        android:src="@drawable/watchmore"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="温湿度监控"
+                        android:textSize="12sp"
+                        android:textColor="#fff"/>
 
-                <Button
-                    android:id="@+id/btn4"
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:drawableTop="@drawable/setting_home"
-                    android:text="我的设置"
-                    />
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/image_setting"
+                        android:scaleType="matrix"
+                        android:clickable="true"
+                        android:src="@drawable/home_setting"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="我的设置"
+                        android:textSize="12sp"
+                        android:textColor="#fff"/>
+
+                </LinearLayout>
+
             </LinearLayout>
 
         </RelativeLayout>
-    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/main_bottom"
+        android:orientation="vertical">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/tabpager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
 
-
-</android.support.v4.widget.DrawerLayout>
+        </android.support.v4.view.ViewPager>
+    </LinearLayout>
+    </RelativeLayout>
