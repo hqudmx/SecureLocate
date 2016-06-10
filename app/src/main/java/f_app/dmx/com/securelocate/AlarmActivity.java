@@ -82,7 +82,7 @@ public class AlarmActivity  extends Activity {
         ima_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(MyHomePage.class);
+                startActivity(NewHomeActivity.class);
             }
         });
     }
@@ -119,31 +119,6 @@ public class AlarmActivity  extends Activity {
                     }
                 }).show();
     }
-
-//    /**
-//     * 查询数据
-//     */
-//    public void queryData(){     //Object[]
-//        BmobQuery query = new BmobQuery("location");
-//        query.findObjects(this, new FindCallback() {
-//            @Override
-//            public void onSuccess(JSONArray arg0) {
-//                //注意：查询的结果是JSONArray,需要自行解析
-//                //showToast("查询成功:"+arg0.length());
-//                Toast.makeText(AlarmActivity.this, "更新成功", Toast.LENGTH_SHORT).show();
-//                location lo=new location();
-//
-//            }
-//
-//            @Override
-//            public void onFailure(int arg0, String arg1) {
-//                //showToast("查询失败:"+arg1);
-//                Toast.makeText(AlarmActivity.this,"更新失败:"+arg1, Toast.LENGTH_SHORT).show();
-//            }
-//        });
-////        return arg0.toArray();
-//    }
-
 
 
     public interface UpdatePoint{

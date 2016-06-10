@@ -8,7 +8,7 @@
     >
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="65dp"
+            android:layout_height="55dp"
             android:id="@+id/main_bottom"
             android:layout_alignParentBottom="true"
             android:orientation="vertical"
@@ -34,6 +34,7 @@
                     android:gravity="center_horizontal"
                     android:layout_weight="1">
                     <ImageView
+                        android:onClick="Click"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/image_map"
@@ -45,7 +46,7 @@
                         android:layout_height="wrap_content"
                         android:text="安全路线"
                         android:textSize="12sp"
-                        android:textColor="#fff"/>
+                        android:textColor="#000000"/>
 
                 </LinearLayout>
                 <LinearLayout
@@ -55,6 +56,7 @@
                 android:gravity="center_horizontal"
                 android:layout_weight="1">
                 <ImageView
+                    android:onClick="Click"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/image_location"
@@ -66,7 +68,7 @@
                     android:layout_height="wrap_content"
                     android:text="安全定位"
                     android:textSize="12sp"
-                    android:textColor="#fff"/>
+                    android:textColor="#000000"/>
 
             </LinearLayout>
                 <LinearLayout
@@ -76,6 +78,7 @@
                     android:gravity="center_horizontal"
                     android:layout_weight="1">
                     <ImageView
+                        android:onClick="Click"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/img_humiture"
@@ -87,7 +90,7 @@
                         android:layout_height="wrap_content"
                         android:text="温湿度监控"
                         android:textSize="12sp"
-                        android:textColor="#fff"/>
+                        android:textColor="#000000"/>
 
                 </LinearLayout>
                 <LinearLayout
@@ -97,6 +100,7 @@
                     android:gravity="center_horizontal"
                     android:layout_weight="1">
                     <ImageView
+                        android:onClick="Click"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/image_setting"
@@ -108,7 +112,7 @@
                         android:layout_height="wrap_content"
                         android:text="我的设置"
                         android:textSize="12sp"
-                        android:textColor="#fff"/>
+                        android:textColor="#000000"/>
 
                 </LinearLayout>
 

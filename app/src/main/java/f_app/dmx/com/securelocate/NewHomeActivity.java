@@ -1,10 +1,12 @@
 package f_app.dmx.com.securelocate;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.Display;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +26,7 @@ import java.util.ArrayList;
 
 public class NewHomeActivity extends Activity{
 
-   /* public  static NewHomeActivity instance=null;
+    public  static NewHomeActivity instance=null;
     private ImageView mTabImg;
     private ViewPager mTabPager;
     private ImageView mTab1,mTab2,mTab3,mTab4;
@@ -67,15 +69,15 @@ public class NewHomeActivity extends Activity{
         Display currDisplay=getWindowManager().getDefaultDisplay();
         int displayWidth=currDisplay.getWidth();
         int displayHeight=currDisplay.getHeight();
-        *//*one=displayWidth/4;
+       /* one=displayWidth/4;
         two=one*2;
-        three=one*3;*//*
-        one=displayWidth;
-        two=displayWidth;
-        three=displayWidth;
+        three=one*3;*/
+        one=0;
+        two=0;
+        three=0;
 
         LayoutInflater mLi=LayoutInflater.from(this);
-         View view1=mLi.inflate(R.layout.activity_map,null);
+        View view1=mLi.inflate(R.layout.activity_map,null);
         View view2=mLi.inflate(R.layout.activity_alarm,null);
         View view3=mLi.inflate(R.layout.activity_humiture,null);
         View view4=mLi.inflate(R.layout.activity_setting,null);
@@ -165,7 +167,7 @@ public class NewHomeActivity extends Activity{
             }
 
             currIndex=position;
-            animation.setFillAfter(true);//bug   true图片停在动画结束的位置
+            animation.setFillAfter(true);//  true图片停在动画结束的位置
             animation.setDuration(150);
             mTabPager.startAnimation(animation);
 
@@ -177,9 +179,9 @@ public class NewHomeActivity extends Activity{
         }
     }
 
-    *//**
+    /**
      * 图标点击事件
-     *//*
+     */
     private class MyOnClickListener implements View.OnClickListener {
         private int index=0;
         MyOnClickListener(int i){
@@ -187,8 +189,9 @@ public class NewHomeActivity extends Activity{
         }
         @Override
         public void onClick(View v) {
-            mTabPager.setCurrentItem(index);//bug
-
+            mTabPager.setCurrentItem(index);
         }
-    }*/
+    }
+
+
 }
