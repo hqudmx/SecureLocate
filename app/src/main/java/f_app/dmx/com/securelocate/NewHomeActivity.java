@@ -24,7 +24,7 @@ import java.util.ArrayList;
 
 public class NewHomeActivity extends Activity{
 
-    public  static NewHomeActivity instance=null;
+   /* public  static NewHomeActivity instance=null;
     private ImageView mTabImg;
     private ViewPager mTabPager;
     private ImageView mTab1,mTab2,mTab3,mTab4;
@@ -67,9 +67,12 @@ public class NewHomeActivity extends Activity{
         Display currDisplay=getWindowManager().getDefaultDisplay();
         int displayWidth=currDisplay.getWidth();
         int displayHeight=currDisplay.getHeight();
-        one=displayWidth/4;
+        *//*one=displayWidth/4;
         two=one*2;
-        three=one*3;
+        three=one*3;*//*
+        one=displayWidth;
+        two=displayWidth;
+        three=displayWidth;
 
         LayoutInflater mLi=LayoutInflater.from(this);
          View view1=mLi.inflate(R.layout.activity_map,null);
@@ -132,7 +135,7 @@ public class NewHomeActivity extends Activity{
                     }
                     break;
                 case 1:
-                    if(currIndex==1){
+                    if(currIndex==0){
                         animation=new TranslateAnimation(zero,one,0,0);
                     }else  if(currIndex==2){
                         animation=new TranslateAnimation(two,one,0,0);
@@ -141,20 +144,20 @@ public class NewHomeActivity extends Activity{
                     }
                     break;
                 case 2:
-                    if(currIndex==1){
+                    if(currIndex==0){
                         animation=new TranslateAnimation(zero,two,0,0);
-                    }else  if(currIndex==2){
+                    }else  if(currIndex==1){
                         animation=new TranslateAnimation(one,two,0,0);
                     }else if(currIndex==3){
                         animation=new TranslateAnimation(three,two,0,0);
                     }
                     break;
                 case 3:
-                    if(currIndex==1){
+                    if(currIndex==0){
                         animation=new TranslateAnimation(zero,three,0,0);
-                    }else  if(currIndex==2){
+                    }else  if(currIndex==1){
                         animation=new TranslateAnimation(one,three,0,0);
-                    }else if(currIndex==3){
+                    }else if(currIndex==2){
                         animation=new TranslateAnimation(two,three,0,0);
                     }
                     break;
@@ -162,7 +165,7 @@ public class NewHomeActivity extends Activity{
             }
 
             currIndex=position;
-            animation.setFillAfter(true);
+            animation.setFillAfter(true);//bug   true图片停在动画结束的位置
             animation.setDuration(150);
             mTabPager.startAnimation(animation);
 
@@ -174,9 +177,9 @@ public class NewHomeActivity extends Activity{
         }
     }
 
-    /**
+    *//**
      * 图标点击事件
-     */
+     *//*
     private class MyOnClickListener implements View.OnClickListener {
         private int index=0;
         MyOnClickListener(int i){
@@ -184,8 +187,8 @@ public class NewHomeActivity extends Activity{
         }
         @Override
         public void onClick(View v) {
-            mTabPager.setCurrentItem(index);
+            mTabPager.setCurrentItem(index);//bug
 
         }
-    }
+    }*/
 }
