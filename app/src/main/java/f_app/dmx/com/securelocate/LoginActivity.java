@@ -80,7 +80,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor>{
         ima_Lo.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-              startActivity(MyHomePage.class);
+              startActivity(SettingActivity.class);
             }
         });
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -113,7 +113,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor>{
         bt_gotiRegister.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(SettingActivity.class);
+                startActivity(RegistePage.class);
 
             }
         });
