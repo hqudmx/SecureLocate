@@ -56,7 +56,7 @@ public class AlarmActivity  extends Activity {
     private MediaPlayer mediaPlayer;
     private Context mContext;
     long[] pattern = {1000, 2000, 1000, 2000};//等待一秒  震动两秒   等待一秒  震动两秒
-    private ImageButton ima_back;
+
     private float a1, b1, a2, b2,a3,b3;
     private final static float r = 1;
     public static final int NOTIFICATION = 1;
@@ -76,16 +76,8 @@ public class AlarmActivity  extends Activity {
         select();
         Alarm(a1, b1, a2, b2);
         SetVoice();
-
-        mContext = AlarmActivity.this;
-        ima_back = (ImageButton) findViewById(R.id.Alarm_backup);
-        ima_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(NewHomeActivity.class);
-            }
-        });
     }
+
 
     public void startActivity(Class<?> cls) {
         Intent intent = new Intent(AlarmActivity.this, cls);
@@ -149,8 +141,34 @@ public class AlarmActivity  extends Activity {
         });
 
     }
-
-
+    public void Click(View v ){
+        switch(v.getId()){
+            case R.id.image_map:
+                startActivity(MyMap.class);
+                finish();
+                break;
+            case R.id.tv_map:
+                startActivity(MyMap.class);
+                finish();
+                break;
+            case R.id.img_humiture:
+                startActivity(Humiture.class);
+                finish();
+                break;
+            case R.id.tv_humiture:
+                startActivity(Humiture.class);
+                finish();
+                break;
+            case R.id.image_setting:
+                startActivity(Humiture.class);
+                finish();
+                break;
+            case R.id.tv_set:
+                startActivity(Humiture.class);
+                finish();
+                break;
+        }
+    }
 
 }
 

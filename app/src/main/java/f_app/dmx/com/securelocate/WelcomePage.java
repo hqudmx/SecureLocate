@@ -27,7 +27,7 @@ public class WelcomePage extends Activity {
 
             public void run(){
                 Intent intent = new Intent();
-                intent.setClass(WelcomePage.this,NewHomeActivity.class);
+                intent.setClass(WelcomePage.this,MyMap.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 WelcomePage.this.startActivity(intent);
                 finish();

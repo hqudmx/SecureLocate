@@ -9,15 +9,6 @@
         android:layout_width="match_parent"
         android:background="#106184"
         android:layout_height="50.0dip" >
-        <ImageButton
-            android:id="@+id/Setting_backup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/back"
-            android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
         <TextView
             android:id="@+id/titleText"
             android:layout_width="wrap_content"
@@ -28,6 +19,17 @@
             android:text="设置"
             android:textColor="#EDEDED"
             android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="登录|注册"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textColor="#EDEDED"
+            android:textSize="15dp"
+            android:onClick="Login"/>
     </RelativeLayout>
 
     <ScrollView
@@ -44,7 +46,8 @@
             android:paddingBottom="60.0dip"
             android:paddingLeft="10.0dip"
             android:paddingRight="10.0dip"
-            android:paddingTop="10.0dip" >
+            android:paddingTop="10.0dip"
+            android:weightSum="1">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -54,7 +57,7 @@
                         android:id="@+id/Setting_roundImage"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/coton"
+                        android:src="@drawable/robot"
                         android:layout_gravity="left">
                     </f_app.dmx.com.securelocate.RoundImageView>
                 <LinearLayout
@@ -83,7 +86,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp">
+                android:layout_marginTop="30dp"
+                android:layout_weight="0.25">
                 <TableLayout
                     android:id="@+id/MorePageTableLayout_Follow"
                     android:layout_width="match_parent"
@@ -323,6 +327,126 @@
         </LinearLayout>
     </ScrollView>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:id="@+id/main_bottom"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_tab_now"
+            android:scaleType="matrix"
+            android:layout_gravity="bottom"
+            android:layout_alignParentBottom="true"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="2dp"
+            android:layout_alignParentTop="true">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_weight="1">
+                <ImageView
+                    android:onClick="Click"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/image_map"
+                    android:scaleType="matrix"
+                    android:clickable="true"
+                    android:src="@drawable/saferoute"/>
+                <TextView
+                    android:id="@+id/tv_map"
+                    android:onClick="Click"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="安全路线"
+                    android:textSize="12sp"
+                    android:textColor="#000000"/>
 
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_weight="1">
+                <ImageView
+                    android:onClick="Click"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/image_location"
+                    android:scaleType="matrix"
+                    android:clickable="true"
+                    android:src="@drawable/location_home"/>
+                <TextView
+                    android:id="@+id/tv_alarm"
+                    android:onClick="Click"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="安全定位"
+                    android:textSize="12sp"
+                    android:textColor="#000000"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_weight="1">
+                <ImageView
+                    android:onClick="Click"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/img_humiture"
+                    android:scaleType="matrix"
+                    android:clickable="true"
+                    android:src="@drawable/watchmore"/>
+                <TextView
+                    android:id="@+id/tv_humiture"
+                    android:onClick="Click"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="温湿度监控"
+                    android:textSize="12sp"
+                    android:textColor="#000000"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_weight="1">
+                <ImageView
+                    android:onClick="Click"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/image_setting"
+                    android:scaleType="matrix"
+                    android:clickable="true"
+                    android:src="@drawable/home_setting"/>
+                <TextView
+                   android:id="@+id/tv_set"
+                    android:onClick="Click"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我的设置"
+                    android:textSize="12sp"
+                    android:textColor="#000000"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </RelativeLayout>

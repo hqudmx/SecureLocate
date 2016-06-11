@@ -2,6 +2,7 @@ package f_app.dmx.com.securelocate;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -159,12 +160,12 @@ public class MyMap extends Activity implements PoiSearch.OnPoiSearchListener {
     public void onPoiSearched(PoiResult result, int rCode) {
         if (rCode == 1000) {
             if (result != null) {
-                Toast.makeText(MyMap.this, "查询成功" , Toast.LENGTH_SHORT).show();
+                Toast.makeText(MyMap.this, "查询成功", Toast.LENGTH_SHORT).show();
                 ArrayList<PoiItem> items = result.getPois();
 
 
             } else {
-                Toast.makeText(MyMap.this, "查询为空" , Toast.LENGTH_SHORT).show();
+                Toast.makeText(MyMap.this, "查询为空", Toast.LENGTH_SHORT).show();
                 List<String> keywords = result.getSearchSuggestionKeywords();
                 List<SuggestionCity> suggsetionCities = result.getSearchSuggestionCitys();
             }
@@ -183,5 +184,38 @@ public class MyMap extends Activity implements PoiSearch.OnPoiSearchListener {
 
     }
 
+    public void startActivity(Class cla) {
+        Intent intent = new Intent(MyMap.this, cla);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
 
+    public void Click(View v) {
+        switch (v.getId()) {
+            case R.id.img_humiture:
+                startActivity(Humiture.class);
+                finish();
+                break;
+            case R.id.tv_humiture:
+                startActivity(Humiture.class);
+                finish();
+                break;
+            case R.id.image_location:
+                startActivity(AlarmActivity.class);
+                finish();
+                break;
+            case R.id.tv_alarm:
+                startActivity(AlarmActivity.class);
+                finish();
+                break;
+            case R.id.image_setting:
+                startActivity(SettingActivity.class);
+                finish();
+                break;
+            case R.id.tv_set:
+                startActivity(SettingActivity.class);
+                finish();
+                break;
+        }
+    }
 }

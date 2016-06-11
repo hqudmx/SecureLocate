@@ -113,7 +113,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor>{
         bt_gotiRegister.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(RegistePage.class);
+                startActivity(SettingActivity.class);
 
             }
         });

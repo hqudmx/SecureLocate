@@ -36,9 +36,10 @@
    <f_app.dmx.com.securelocate.RoundImageView
        android:layout_width="85dp"
        android:layout_height="85dp"
-       android:src="@drawable/coton"
+       android:src="@drawable/robot_s"
        android:layout_above="@+id/email_login_form"
-       android:layout_centerHorizontal="true">
+       android:layout_centerHorizontal="true"
+       android:id="@+id/view2">
 
    </f_app.dmx.com.securelocate.RoundImageView>
 
@@ -140,7 +141,7 @@
         </LinearLayout>
 
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout2"
@@ -153,21 +154,25 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center_horizontal"
-            android:layout_above="@+id/new_button"
             android:layout_centerHorizontal="true">
-            <ImageButton
-                android:id="@+id/QQ_login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/qq"/>
+
             <ImageButton
                 android:id="@+id/weichat_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/weixin"/>
+                android:src="@drawable/weixin"
+                android:layout_alignTop="@+id/linearLayout2"
+                android:layout_toLeftOf="@+id/linearLayout"
+                android:layout_toStartOf="@+id/linearLayout" />
+
+            <ImageButton
+                android:id="@+id/QQ_login"
+                android:layout_width="91dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/qq"/>
         </LinearLayout>
 
-    </LinearLayout>
+    </RelativeLayout>
     <LinearLayout
 
         android:layout_width="wrap_content"
@@ -186,6 +191,14 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="第三方登录："
+        android:layout_above="@+id/linearLayout2"
+        android:layout_toLeftOf="@+id/view2"
+        android:layout_toStartOf="@+id/view2" />
 
 
 </RelativeLayout>
