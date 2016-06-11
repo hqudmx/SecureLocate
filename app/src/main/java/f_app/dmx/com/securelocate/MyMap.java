@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -63,6 +64,8 @@ import java.util.Locale;
  */
 public class MyMap extends Activity implements AMap.OnMarkerClickListener, AMap.InfoWindowAdapter, TextWatcher,
         PoiSearch.OnPoiSearchListener, OnClickListener, Inputtips.InputtipsListener {
+
+    SharedPreferences.Editor mEditor;
     private MapView mMapView;
     private Spinner mSpinner;
     private AMap amap;
@@ -82,6 +85,12 @@ public class MyMap extends Activity implements AMap.OnMarkerClickListener, AMap.
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_map);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("State", Context.MODE_PRIVATE);
+        mEditor = sharedPreferences.edit();
+        mEditor.putBoolean("App_state", true);
+      //  mEditor.putBoolean("isFirst", false);
+        mEditor.commit();
 
         //mEditText = (AutoCompleteTextView) findViewById(R.id.id_search);
        // mBt = (Button) findViewById(R.id.bt_search);
