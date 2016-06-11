@@ -61,15 +61,7 @@
 
         </activity>
 
-        <activity android:name=".MyHomePage"
-            android:screenOrientation="portrait">
-        </activity>
         <activity android:name=".AlarmActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
-
-        <activity android:name=".SafeActivity"
             android:screenOrientation="portrait">
 
         </activity>
