@@ -5,14 +5,24 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
 
 public class SettingActivity  extends Activity{
+    TableLayout tableLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        tableLayout =(TableLayout)findViewById(R.id.MorePageTableLayout_Follow);
+        TableRow tableRow=new TableRow(getBaseContext());
+      /*  tableRow.getChildAt(1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(Mao_Activity.class);
+            }
+        });*/
         setContentView(R.layout.activity_setting);
 
 
@@ -54,6 +64,20 @@ public class SettingActivity  extends Activity{
     }
     public void Login(View v){
         startActivity(LoginActivity.class);
+    }
+
+    public void Mao_click(View view){
+        startActivity(Mao_Activity.class);
+    }
+
+    public void Alarm_click(View view){
+        startActivity(Alarm_setting.class);
+        }
+    public void Feedback_click(View view){
+        startActivity(FeedBackActivity.class);
+    }
+    public void About_click(View view){
+        startActivity(AboutActivity.class);
     }
 
 

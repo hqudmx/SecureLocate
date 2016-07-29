@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/top_relative_login"
+        android:layout_width="match_parent"
+        android:background="#106184"
+        android:layout_height="50.0dip" >
+        <ImageButton
+            android:id="@+id/Find_backup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:onClick="Cancle_click"/>
+
+        <TextView
+            android:id="@+id/titleText_find"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:singleLine="true"
+            android:text="意见反馈"
+            android:textColor="#EDEDED"
+            android:textSize="15dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/top_relative_login"
+        android:weightSum="9"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <EditText
+        android:background="@android:drawable/edit_text"
+        android:gravity="top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:hint="请留下您宝贵的意见……"/>
+
+            <Button
+            android:layout_width="match_parent"
+           android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="提交"
+            android:textSize="26sp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

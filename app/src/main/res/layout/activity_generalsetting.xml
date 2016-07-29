@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_weight="0.25">
+        <TableLayout
+            android:id="@+id/MorePageTableLayout_Follow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="1.0dip"
+            android:shrinkColumns="0"
+            android:stretchColumns="0" >
+            <View
+                android:layout_height="1dip"
+                android:background="#FF909090"
+                />
+            <TableRow
+                android:id="@+id/more_page_row15"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:paddingBottom="5.0dip"
+                android:paddingTop="5.0dip"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="10.0dip"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="17.0dip"
+                    android:text="字体大小"
+                    android:textColor="#ff333333"
+                    android:textSize="16.0sp" />
+                <ImageView
+                    android:src="@drawable/next"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+
+            </TableRow>
+
+
+            <View
+                android:layout_height="1dip"
+                android:background="#FF909090"
+                />
+            <TableRow
+                android:id="@+id/more_page_row1"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:paddingBottom="5.0dip"
+                android:paddingTop="5.0dip"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="10.0dip"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="17.0dip"
+                    android:text="流量统计"
+                    android:textColor="#ff333333"
+                    android:textSize="16.0sp" />
+                <ImageView
+                    android:src="@drawable/next"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+
+            </TableRow>
+
+
+            <View
+                android:layout_height="1dip"
+                android:background="#FF909090"
+                />
+            <TableRow
+                android:id="@+id/more_page_row2"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:paddingBottom="5.0dip"
+                android:paddingTop="5.0dip"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="10.0dip"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="17.0dip"
+                    android:text="修改锚点"
+                    android:textColor="#ff333333"
+                    android:textSize="16.0sp" />
+                <ImageView
+                    android:src="@drawable/next"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+
+            </TableRow>
+
+
+            <View
+                android:layout_height="1dip"
+                android:background="#FF909090"
+                />
+            <TableRow
+                android:id="@+id/more_page_row3"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:paddingBottom="5.0dip"
+                android:paddingTop="5.0dip"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="10.0dip"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="17.0dip"
+                    android:text="查找锚点"
+                    android:textColor="#ff333333"
+                    android:textSize="16.0sp" />
+                <ImageView
+                    android:src="@drawable/next"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+
+            </TableRow>
+
+
+            <View
+                android:layout_height="1dip"
+                android:background="#FF909090"
+                />
+        </TableLayout>
+    </LinearLayout>
+
+</RelativeLayout>

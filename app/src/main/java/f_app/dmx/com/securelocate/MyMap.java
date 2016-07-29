@@ -482,7 +482,7 @@ public class MyMap extends Activity implements AMap.OnMarkerClickListener, AMap.
                 Toast.makeText(MyMap.this, "无返回结果", Toast.LENGTH_SHORT).show();
             }
         } else {
-            Toast.makeText(MyMap.this, "查询错误："+rCode, Toast.LENGTH_SHORT).show();
+           // Toast.makeText(MyMap.this, "查询错误："+rCode, Toast.LENGTH_SHORT).show();
         }
 
     }
@@ -530,7 +530,7 @@ public class MyMap extends Activity implements AMap.OnMarkerClickListener, AMap.
             mEditText.setAdapter(aAdapter);
             aAdapter.notifyDataSetChanged();
         } else {
-            Toast.makeText(MyMap.this, "查询错误："+rCode, Toast.LENGTH_SHORT).show();
+           // Toast.makeText(MyMap.this, "查询错误："+rCode, Toast.LENGTH_SHORT).show();
         }
 
     }

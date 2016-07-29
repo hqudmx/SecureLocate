@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/top_relative_login"
+        android:layout_width="match_parent"
+        android:background="#106184"
+        android:layout_height="50.0dip" >
+        <ImageButton
+            android:id="@+id/Find_backup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:onClick="Cancle_click"/>
+
+        <TextView
+            android:id="@+id/titleText_find"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:singleLine="true"
+            android:text="关于"
+            android:textColor="#EDEDED"
+            android:textSize="15dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@+id/top_relative_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:gravity="center_horizontal"
+        android:id="@+id/relativeLayout">
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@drawable/icon_a" />
+    </RelativeLayout>
+  <LinearLayout
+      android:id="@+id/line1"
+      android:layout_marginTop="240dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <TextView
+          android:lineSpacingExtra="3dp"
+          android:textSize="16sp"
+          android:layout_width="wrap_content"
+          android:layout_height="217dp"
+          android:text="       此项目采用短距离无线通信zigbee技术来实现硬件平台的搭建，在IAR集成开发环境上编写相应的终端节点，协调器，路由器程序，烧录到zigbee设备后组建我们项目所需要的网络拓扑结构，协调器收到数据后传给串口，在C#端编写函数从串口读出数据，并在窗体程序中显示得到的各节点间的距离和相应的坐标，同时将数据上传到服务器，手机app端从服务器获取数据，当进入设定的危险区域时，手机端和电脑终端都能及时警报，避免危险事故的发生。
+"/>
+  </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="38sp"
+       android:text="安全定位"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="3dp"
+        android:textSize="12sp"
+        android:text="Copyright@2016 华侨大学  All Rights Reserved"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/line1"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

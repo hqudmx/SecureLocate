@@ -81,6 +81,18 @@
         <activity android:name=".NewHomeActivity"
             android:screenOrientation="portrait">
         </activity>
+        <activity android:name=".Mao_Activity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity android:name=".Alarm_setting"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".AboutActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".FeedBackActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".GeneralSetting"
+            android:screenOrientation="portrait"></activity>
         <activity android:name=".MyMap"
             android:screenOrientation="portrait">
         </activity>
